@@ -1,4 +1,4 @@
-const sql = require("mysql")
+const sql = require("mysql2")
 const dot_env = require("dotenv").config()
 const db = sql.createConnection({
     database:process.env.DATABASE,
