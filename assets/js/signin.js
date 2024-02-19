@@ -9,7 +9,7 @@ signInForm.addEventListener("submit", () => {
         success.style.display = 'none'
         error.innerText = "Enter a valid Email"
     } else {
-
+        showSpinner()
         const signin = {
 
             email: email.value.trim(),
@@ -24,6 +24,8 @@ signInForm.addEventListener("submit", () => {
             },
         }).then(response => response.json())
             .then(data => {
+            hideSpinner()
+
                 if (data.status == "error") {
                     error.style.display = 'block'
                     error.innerText = data.error
@@ -36,4 +38,11 @@ signInForm.addEventListener("submit", () => {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+function showSpinner() {
+    document.querySelector('.spinner').style.display = 'block';
+}
+
+function hideSpinner() {
+    document.querySelector('.spinner').style.display = 'none';
 }

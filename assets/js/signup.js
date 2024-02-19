@@ -15,6 +15,7 @@ signUpForm.addEventListener("submit", () => {
         error.innerText = "Enter a valid Email"
     }
     else {
+        showSpinner()
         const signup = {
             first_name: first_name.value.trim(),
             last_name: last_name.value.trim(),
@@ -31,6 +32,8 @@ signUpForm.addEventListener("submit", () => {
             }
         }).then(response => response.json())
             .then(data => {
+            hideSpinner()
+
                 if (data.status == "error") {
                     error.style.display = 'block'
                     success.style.display = 'none'
@@ -47,4 +50,11 @@ signUpForm.addEventListener("submit", () => {
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+function showSpinner() {
+    document.querySelector('.spinner').style.display = 'block';
+}
+
+function hideSpinner() {
+    document.querySelector('.spinner').style.display = 'none';
 }
