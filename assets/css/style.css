@@ -1,0 +1,107 @@
+.sgnup-sec {
+  position: relative;
+}
+
+.sgnupimg {
+  max-width: -webkit-fill-available;
+  height: fit-content;
+  object-fit: cover;
+  margin: 0 0 1.5rem 1.5rem;
+}
+
+.sgnup-txt {
+  position: absolute;
+  background-color: #474359;
+  opacity: 0.6;
+  bottom: 0;
+  left: 0;
+  right: 1.8rem;
+  text-align: center;
+  padding: 75px 18px;
+  border-bottom-left-radius: 12px;
+}
+
+
+.sgnup-txt h1 {
+  color: #fff;
+}
+
+.underline {
+  border-bottom: 4px solid #fff;
+  width: 3rem;
+  display: block;
+  margin: auto;
+  line-height: 1.6em;
+}
+
+.sgnup-txt p {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.sgnup-txt ul {
+  margin-left: 20px;
+}
+
+.sgnup-txt ul li {
+  list-style: disc;
+  color: #fff;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+
+.sign-in-btn {
+  color: #5933dd;
+  border: 2px solid #5933dd;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 4px 25px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sign-up-block {
+  border-radius: 12px;
+}
+
+.sign-up-form {
+  margin: 3rem 3rem;
+
+  h1,
+  h6 {
+    color: #5933dd
+  }
+
+}
+
+.table tbody td {
+  border-bottom: 0px;
+  padding: 12px 0px;
+}
+
+.table {
+  margin-top: 2rem;
+}
+
+.form-control {
+  border-radius: 3px !important;
+
+}
+
+.sign-up-button {
+  border-radius: 3px !important;
+  width: 100%;
+  background-color: #3f27d7;
+}
+
+.sign-in-container {
+  max-width: 40vw !important;
+}
+
+@media (max-width: 1023px) {
+  .sgnupimg {
+    border-top-right-radius: 12px;
+  }
+}
