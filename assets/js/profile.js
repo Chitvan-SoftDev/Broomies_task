@@ -5,7 +5,7 @@ fetch('/api/userDetails', { method: "get" })
         hideSpinner()
 
         if (data.status != "error" && data.user) {
-            
+
             document.getElementById('name').textContent = data.user.first_name + " " + data.user.last_name;
             document.getElementById('email').textContent = data.user.email;
             document.getElementById('username').textContent = data.user.username;
@@ -22,8 +22,12 @@ fetch('/api/userDetails', { method: "get" })
     });
 function showSpinner() {
     document.querySelector('.spinner').style.display = 'block';
+    document.querySelector('.overlay').style.display = 'block';
 }
+
+
 
 function hideSpinner() {
     document.querySelector('.spinner').style.display = 'none';
+    document.querySelector('.overlay').style.display = 'none';
 }

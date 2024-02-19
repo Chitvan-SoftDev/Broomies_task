@@ -26,7 +26,7 @@ const signup = async (request, response) => {
                     if(error){
                         throw error
                     }else{
-                        return response.json({status:"success", success:"User registered."})
+                        return response.json({status:"success", success:"User registered. Please sign in."})
 
                     }
                 })

@@ -9,7 +9,7 @@ signUpForm.addEventListener("submit", () => {
         success.style.display = 'none'
         error.innerText = "Password doesn't match."
     }
-    else if(!isValidEmail(email.value.trim())){
+    else if (!isValidEmail(email.value.trim())) {
         error.style.display = 'block'
         success.style.display = 'none'
         error.innerText = "Enter a valid Email"
@@ -32,7 +32,7 @@ signUpForm.addEventListener("submit", () => {
             }
         }).then(response => response.json())
             .then(data => {
-            hideSpinner()
+                hideSpinner()
 
                 if (data.status == "error") {
                     error.style.display = 'block'
@@ -53,8 +53,9 @@ function isValidEmail(email) {
 }
 function showSpinner() {
     document.querySelector('.spinner').style.display = 'block';
+    document.querySelector('.overlay').style.display = 'block';
 }
-
 function hideSpinner() {
     document.querySelector('.spinner').style.display = 'none';
+    document.querySelector('.overlay').style.display = 'none';
 }
