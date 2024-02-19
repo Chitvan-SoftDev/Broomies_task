@@ -97,12 +97,15 @@
 }
 
 .sign-in-container {
-  max-width: 40vw !important;
+  max-width: 40% !important;
 }
 
 @media (max-width: 1023px) {
   .sgnupimg {
     border-top-right-radius: 12px;
+  }
+  .sign-in-container {
+    max-width: 80% !important;
   }
 }
 
